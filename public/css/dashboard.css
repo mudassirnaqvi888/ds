@@ -1,0 +1,45 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+.db{
+    background-color: teal;
+    color:white;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.sd{
+    border: solid teal 1px;
+    height: 450px;
+    background-color:lightgoldenrodyellow;
+}
+
+.ld{
+    margin-top: 10px;
+}
+
+.ld a{
+    background-color:lightgoldenrodyellow;    
+}
+
+input{
+    margin-top: 10px;
+}
+
+.ld a:hover{
+    background-color: teal;
+    color: white;
+}
+
+.list-group-item{
+    border: none !important;
+}
+
+.card{
+    margin: 0 auto;
+    border: none;
+    margin-top: 10px;
+    background-color: lightgoldenrodyellow;
+}

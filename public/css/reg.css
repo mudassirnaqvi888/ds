@@ -1,0 +1,24 @@
+
+form{
+    height: 200px;
+    width: 450px;
+    margin: 0 auto;
+    margin-top: 10px;
+}
+
+.rg{
+    border: solid 1px;
+    height: 530px;
+    margin-top: 20px;
+    background-color: lightgoldenrodyellow;
+}
+
+form h4{
+    text-align: center;
+    margin-bottom: 30px;
+}
+
+
+.vf{
+    margin-top: 120px;
+}
