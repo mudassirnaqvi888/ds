@@ -62,6 +62,7 @@ app.post('/login',(req,resp)=>{
     console.log(password);
     if(email == results[0].Email & password == results[0].Password){
         req.session.email = results[0].Email;
+        resp.cookie('email',email)
         return resp.redirect('dashboard');
     }else{
         console.log("invalid password");
@@ -74,6 +75,21 @@ app.get('/dashboard',auth.islogin,(req,resp)=>{
 })
 
 app.post('/dashboard',(req,resp)=>{
+    var patient = req.body.patient;
+    var specialist = req.body.specialist;
+    var doctor = req.body.doctor;
+    var time = req.body.time;
+    var phone = req.body.phone;
+    var email = req.cookies.email;
+    var sql ="INSERT INTO appointment (PATIENTNAME, SPECIALIST, DOCTORS, APPOINTMENTTIME, PHONENUMBER, Email) VALUES (?,?,?,?,?,?);";
+    con.query(sql,[patient,specialist,doctor,time,phone,email],(error,results)=>{
+        if(error){
+            console.log(error);
+        }else{
+            resp.redirect('/dashboard');
+        }
+    })
+    
 })
 
 app.get('/verification',(req,resp)=>{
@@ -107,5 +123,18 @@ app.post('/verification',(req,resp)=>{
 app.get('/logout',auth.logout,(req,resp)=>{
     resp.sendFile(__dirname + "/public/logout.html")
 })
+
+app.get('/appointmenthistory',auth.islogin,(req,resp)=>{
+    var email = req.cookies.email;
+    var sql = "SELECT * FROM appointment WHERE Email=?";
+    con.query(sql,[email],(error,results)=>{
+        if(error){
+            console.log(error);
+        }else{
+            resp.render("appointmenthistory",{results});
+        }
+    })
+})
+
 
 app.listen(5000);

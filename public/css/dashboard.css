@@ -43,3 +43,12 @@ input{
     margin-top: 10px;
     background-color: lightgoldenrodyellow;
 }
+
+.appoint th,td{
+    padding-left: 15px;
+    background-color: white;
+}
+
+.list-group-item.active{
+    background-color: teal;
+}

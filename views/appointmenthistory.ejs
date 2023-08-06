@@ -27,11 +27,11 @@
         <!-- side bar -->
         <div class="col-md-2 sd">
           <div class="list-group ld">
-            <a href="#" class="list-group-item list-group-item-action active">
+            <a href="/dashboard" class="list-group-item list-group-item-action">
               Book Appointment
             </a>
             <a href="#" class="list-group-item list-group-item-action">User Profile</a>
-            <a href="/appointmenthistory" class="list-group-item list-group-item-action">Appointment History</a>
+            <a href="#" class="list-group-item list-group-item-action active">Appointment History</a>
             <a href="/logout" class="list-group-item list-group-item-action">Sign out</a>
           </div>
         </div>
@@ -39,47 +39,29 @@
         <div class="col-md-10 sd">
           <div class="card w-75">
             <div class="card-body">
-              <h5 class="card-title">Book Appointment</h5>
-              <p class="card-text">
-                <form action="" method="post">
-                <h6>Select Specialist</h6>
-                <select class="form-select" name="specialist" aria-label="Default select example">
-                  <option selected name="specialist">Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-
-                <h6>Select Doctor</h6>
-                <select class="form-select" name="doctor" aria-label="Default select example">
-                  <option selected name="doctor">Open this select menu</option>
-                  <option value="1">One</option>
-                  <option value="2">Two</option>
-                  <option value="3">Three</option>
-                </select>
-
-                <div class="row g-3">
-                  <div class="col">
-                    <input type="text" class="form-control" name="patient" placeholder="Patient name" aria-label="First name">
-                  </div>
-                  <div class="col">
-                    <input type="text" class="form-control" name="phone" placeholder="Phone number" aria-label="Last name">
-                  </div>
-                  <div class="col">
-                    <input type="datetime-local" class="form-control" name="time" placeholder="Phone number" aria-label="Last name">
-                  </div>
-                </div>
-              </p>
-              <button class="btn btn-primary" type="Submit" style="background-color: teal; color: white;">Submit</button>
-            </form>
+              <h5 class="card-title">Appointment History</h5>
+              <table class="appoint">
+                <tr>
+                    <th>Patient Name</th>
+                    <th>Doctor Name</th>
+                    <th>Appointment Time</th>
+                    <th>Phone Number</th>
+                </tr>
+                <%for(var i=0 ; i < results.length; i++){%>
+                <tr>
+                  <td><%= results[i].PATIENTNAME%></td>
+                  <td><%= results[i].DOCTORS%></td>
+                  <td><%= results[i].APPOINTMENTTIME%></td>
+                  <td><%= results[i].PHONENUMBER%></td>
+                </tr>
+                <%}%>
+                
+              </table>
             </div>
           </div> 
         </div>
       </div>
     </div>
-
-  
-
 
 
   <script src="https://kit.fontawesome.com/c7651ae8ad.js" crossorigin="anonymous"></script>
