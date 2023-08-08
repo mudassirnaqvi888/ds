@@ -1,72 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Document</title>
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="./css/dashboard.css">
 </head>
+
 <body>
-    <!-- nav -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: yellow;">
-      <a class="navbar-brand reg" href="/"><h2>PORTFOLIO</h2></a>
-      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-        <span class="navbar-toggler-icon"></span>
-      </button>
-    </nav>
-    <!-- nav close -->
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-md-12 db">
-          <h4>DASHBOARD APPOINTMENT SYSTEM</h4>
-        </div>
+  <!-- nav -->
+  <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color: yellow;">
+    <a class="navbar-brand reg" href="/">
+      <h2>PORTFOLIO</h2>
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent"
+      aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+  </nav>
+  <!-- nav close -->
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-md-12 db">
+        <h4>DASHBOARD APPOINTMENT SYSTEM</h4>
       </div>
     </div>
-    <!-- side bar and main bar -->
-    <div class="container-fluid">
-      <div class="row">
-        <!-- side bar -->
-        <div class="col-md-2 sd">
-          <div class="list-group ld">
-            <a href="/dashboard" class="list-group-item list-group-item-action">
-              Book Appointment
-            </a>
-            <a href="#" class="list-group-item list-group-item-action">User Profile</a>
-            <a href="#" class="list-group-item list-group-item-action active">Appointment History</a>
-            <a href="/logout" class="list-group-item list-group-item-action">Sign out</a>
-          </div>
+  </div>
+  <!-- side bar and main bar -->
+  <div class="container-fluid">
+    <div class="row">
+      <!-- side bar -->
+      <div class="col-md-2 sd">
+        <div class="list-group ld">
+          <a href="/dashboard" class="list-group-item list-group-item-action">
+            Book Appointment
+          </a>
+          <a href="/userprofile" class="list-group-item list-group-item-action">User Profile</a>
+          <a href="#" class="list-group-item list-group-item-action active">Appointment History</a>
+          <a href="/logout" class="list-group-item list-group-item-action">Sign out</a>
         </div>
-        <!-- main menu -->
-        <div class="col-md-10 sd">
-          <div class="card w-75">
-            <div class="card-body">
-              <h5 class="card-title">Appointment History</h5>
-              <table class="appoint">
-                <tr>
-                    <th>Patient Name</th>
-                    <th>Doctor Name</th>
-                    <th>Appointment Time</th>
-                    <th>Phone Number</th>
-                </tr>
-                <%for(var i=0 ; i < results.length; i++){%>
-                <tr>
-                  <td><%= results[i].PATIENTNAME%></td>
-                  <td><%= results[i].DOCTORS%></td>
-                  <td><%= results[i].APPOINTMENTTIME%></td>
-                  <td><%= results[i].PHONENUMBER%></td>
-                </tr>
-                <%}%>
-                
+      </div>
+      <!-- main menu -->
+      <div class="col-md-10 sd">
+        <div class="card w-75">
+          <div class="card-body">
+            <h5 class="card-title">Appointment History</h5>
+              <table class="table-sm table-light">
+                <thead>
+                  <tr>
+                    <th scope="col">Patient Name</th>
+                    <th scope="col">Doctor Name</th>
+                    <th scope="col">Appointment Time</th>
+                    <th scope="col">Phone Number</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <%for(var i=0 ; i < results.length; i++){%>
+                    <tr>
+                      <td>
+                        <%= results[i].PATIENTNAME%>
+                      </td>
+                      <td>
+                        <%= results[i].DOCTORS%>
+                      </td>
+                      <td>
+                        <%= results[i].APPOINTMENTTIME%>
+                      </td>
+                      <td>
+                        <%= results[i].PHONENUMBER%>
+                      </td>
+                    </tr>
+                    <%}%>
+                </tbody>
               </table>
             </div>
           </div> 
-        </div>
-      </div>
-    </div>
+            </div>
+          </div>
 
 
-  <script src="https://kit.fontawesome.com/c7651ae8ad.js" crossorigin="anonymous"></script>
-  <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-<script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+          <script src="https://kit.fontawesome.com/c7651ae8ad.js" crossorigin="anonymous"></script>
+          <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js"
+            integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n"
+            crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+            integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+            crossorigin="anonymous"></script>
+          <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/js/bootstrap.min.js"
+            integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6"
+            crossorigin="anonymous"></script>
 </body>
+
 </html>

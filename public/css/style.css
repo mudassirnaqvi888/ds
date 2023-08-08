@@ -12,21 +12,14 @@ body{
     height: 400px;
     width: 200px;
     margin-top: 50px;
+    border: solid 1px;
 }
 
 
 .me{
-    height: 350px;
-    width: 450px;
-    margin-left: 0px;
-    display: flex;
-}
-
-.me img{
-    height: 100%;
-    width: 100%;
-    border-radius: 10px;
-    display: flex;
+    margin-top: 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
 }
 
 .sid h2{
@@ -99,4 +92,14 @@ form h4{
     display: block;
     margin-bottom: 15px;
     margin-top: 15px;
+}
+
+.pj img{
+    height: 100%;
+    width: 100%;
+    border-radius: 10px;
+}
+
+.pj{
+    margin-bottom: 80px;
 }

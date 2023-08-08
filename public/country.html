@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css"
+		integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+	<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"
+		integrity="sha384-HwwvtgBNo3bZJJLYd8oVXjrBZt8cqVSpeBNS5n7C8IVInixGAoxmnlMuBnhbgrkm"
+		crossorigin="anonymous"></script>
+	<style type="text/css">
+		body {
+			background-image: url('world.gif');
+		}
+
+		#msg {
+			height: 200px;
+			width: 300px;
+			/*			border: solid 1px;*/
+			display: flex;
+			margin-top: 10px;
+			border-radius: 50px;
+
+		}
+
+		div {
+			height: 340px;
+			width: 300px;
+			color: white;
+			margin: 0 auto;
+		}
+
+		input {
+			margin: 2px;
+			font-family: cursive;
+		}
+	</style>
+	<script type="text/javascript">
+		function demo() {
+			b = document.getElementById('inp').value;
+			a = "https://restcountries.com/v3.1/name/" + b;
+			fetch(a).then(x => x.json()).then(y => {
+				c = Object.values(y[0].languages);
+				d = Object.keys(y[0].currencies)
+				e = Object.values(d);
+				document.getElementById('msg').src = y[0].flags['png'];
+				document.getElementById('cap').value = y[0].capital;
+				document.getElementById('lang').value = c;
+				document.getElementById('Pop').value = y[0].population;
+				document.getElementById('Cur').value = e;
+
+
+
+
+			}
+
+			)
+		}
+	</script>
+</head>
+
+<body>
+	<div>
+		<img src="rain.jpg" class="img-rounded" alt="Cinque Terre" id="msg"><br>
+		Capital:<input type="text" class="form-control" name="" value="" id="cap" disabled>
+		languages:<input type="text" class="form-control" name="" value="" id="lang" disabled>
+		Currency:<input type="text" class="form-control" name="" value="" id="Cur" disabled>
+		Population:<input type="text" class="form-control" name="" value="" id="Pop" disabled>
+		<label for="usr">Enter Country Name:</label>
+		<input type="text" class="form-control" name="" value="" id="inp"><br>
+		<button type="button" class="btn btn-primary" onclick="demo()" value="">Submit</button>
+	</div>
+</body>
+
+</html>

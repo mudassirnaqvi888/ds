@@ -45,10 +45,20 @@ input{
 }
 
 .appoint th,td{
-    padding-left: 15px;
-    background-color: white;
+    padding-left: 10px;
+    background-color:white;
 }
 
 .list-group-item.active{
     background-color: teal;
+}
+
+.appoint td{
+    background-color: white;
+}
+
+.sd button{
+    margin-top: 10px;
+    width: 100px;
+    margin-left: 13px;
 }
