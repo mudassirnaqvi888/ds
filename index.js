@@ -1,8 +1,8 @@
 const express = require('express');
 const app = express();
 const path = require('path');
-const mysql = require('mysql');
-const con = require('./config');
+// const mysql = require('mysql');
+// const con = require('./config');
 const bodyParser = require('body-parser');
 const { error } = require('console');
 const sendMail = require('./mail');
@@ -181,15 +181,15 @@ app.get('/wassup',(req,resp)=>{
 
 // socket 
 
-const io = require('socket.io')(http)
+// const io = require('socket.io')(http)
 
 
-io.on('connection',(socket)=>{
-    console.log('connected...')
-    socket.on('message', (msg)=>{
-        socket.broadcast.emit('message', msg);
-    })
-})
+// io.on('connection',(socket)=>{
+//     console.log('connected...')
+//     socket.on('message', (msg)=>{
+//         socket.broadcast.emit('message', msg);
+//     })
+// })
 
 
 
