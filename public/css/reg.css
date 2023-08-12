@@ -21,6 +21,7 @@ form{
     height: 530px;
     margin-top: 20px;
     background-color: lightgoldenrodyellow;
+    border-radius: 10px;
 }
 
 form h4{
@@ -31,4 +32,9 @@ form h4{
 
 .vf{
     margin-top: 120px;
+}
+
+.bt{
+    width: 50%;
+    margin: 0 auto;
 }

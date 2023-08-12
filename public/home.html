@@ -21,7 +21,7 @@
               <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" href="#pp">Project</a>
+              <a class="nav-link" href="#pp">Projects</a>
             </li>
 
             <li class="nav-item">
@@ -35,8 +35,8 @@
         <div class="row">
             <div class="col-md-6 sid">
                 <h2>I'M MUDASSIR NAQVI</h2>
-                <h3><p></p></h3>
-                <h4>I'm pursuing a degree of computer science from Ubit Department of karachi university.</h>
+                <h5><p></p></h5>
+                <h4>I'm pursuing a degree of computer science from Ubit Department of karachi university.</h4>
             </div>
              <img src="me.jpg" class="col-md-6 me"/>
         </div>
@@ -49,7 +49,7 @@
                 <div class="container">
                     <div class="row">
                         <div class="col pro">
-                            <h2 id="pp">PROJECT</h2>
+                            <h2 id="pp">PROJECTS</h2>
                         
                         </div>
                     </div>
@@ -60,22 +60,77 @@
       <!-- project name -->
       <div class="container-fluid">
         <div class="row">
-          <div class="col-md-4 pj">
-            <h4>DOCTOR APPOINTMENT SYSTEM</h4>
+          <div class="col-md-3 pj">
+            <h4>APPOINTMENT SYSTEM</h4>
               <a href="./registration"><img class="regi" src="./reg.png"/></a>
           </div>
-          <div class="col-md-4 pj">
-            <h4>COUNTRIES DETAILS SEARCHER</h4>
+          <div class="col-md-3 pj">
+            <h4>COUNTRIES SEARCHER</h4>
               <a href="./country"><img class="regi" src="./api.PNG"/></a>
           </div>
-          <div class="col-md-4 pj">
+          <div class="col-md-3 pj">
             <h4>WEATHER APP</h4>
               <a href="./weatherapp"><img class="regi" src="./weather.PNG"/></a>
+          </div>
+          <div class="col-md-3 pj">
+            <h4>Real Time Chat App</h4>
+              <a href="./wassup"><img class="regi" src="./chatapp.PNG"/></a>
           </div>
         </div>
       </div>
       
       <!-- project close -->
+      <div class="container-fluid">
+        <div class="row">
+          <div class="col-md-12 con">
+            <div class="container">
+              <div class="row">
+                <div class="col-md-12"><h2>MY SKILLS SET</h2></div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid sk">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="html.png" class="fa-flip" height="150" alt/>
+            <h2>HTML</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="css.png" class="fa-flip" height="150" alt/>
+            <h2>CSS</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="js.png" class="fa-flip" height="150" alt/>
+            <h2>JAVASCRIPT</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="boot.png" class="fa-flip" height="150" alt/>
+            <h2>BOOTSTRAP</h2>
+          </div>
+        </div>
+      </div>
+      <div class="container-fluid sk">
+        <div class="row">
+          <div class="col-md-3">
+            <img src="nodejs.png" class="fa-flip" height="150" alt/>
+            <h2>NODE JS</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="ex.png" class="fa-flip" height="150" alt/>
+            <h2>EXPRESS JS</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="mysql.png" class="fa-flip" height="150" alt/>
+            <h2>MY SQL</h2>
+          </div>
+          <div class="col-md-3">
+            <img src="react.png" class="fa-flip" height="150" alt/>
+            <h2>REACT JS</h2>
+          </div>
+        </div>
+      </div>
       <!-- contact start -->
       <div class="container-fluid">
         <div class="row">
@@ -93,35 +148,37 @@
      <!-- contact form start -->
      <div class="container-fluid frb">
         <div class="row">
-            <div class="col">
+          <div class="col-md-3"></div>
+            <div class="col-md-6">
                 <!-- first name -->
-                <form>
+                <form action="https://formsubmit.co/abbasshahnaqvi@gmail.com" method="POST">
                     <h4>GET IN TOUCH</h4>
                     <div class="form-row">
                       <div class="col">
-                        <input type="text" class="form-control" placeholder="First name">
+                        <input type="text" class="form-control" name="firstname" placeholder="First name">
                       </div>
                       <div class="col">
-                        <input type="text" class="form-control" placeholder="Last name">
+                        <input type="text" class="form-control" name="lastname" placeholder="Last name">
                       </div>
                     </div>
                   <!-- first name close -->
                   <!-- email and phone start -->
                     <div class="form-row">
                       <div class="col">
-                        <input type="text" class="form-control" placeholder="Email">
+                        <input type="text" class="form-control" name="email" placeholder="Email">
                       </div>
                       <div class="col">
-                        <input type="text" class="form-control" placeholder="Phone">
+                        <input type="text" class="form-control" name="phone" placeholder="Phone">
                       </div>
                     </div>
                   <!-- email and phone close -->
                   <!-- text area -->
                   <label for="validationTextarea">Message</label>
-                  <textarea class="form-control " id="validationTextarea" placeholder="Please Enter Your Message" required></textarea>
+                  <textarea class="form-control " name="text" id="validationTextarea" placeholder="Please Enter Your Message" required></textarea>
                   <div class="invalid-feedback">
                     Please enter a message in the textarea.
                   </div>
+                  <input type="hidden" name="_captcha" value="false">
                   <input class="btn" type="submit" value="Submit" style="background-color: yellow;">
 
                 </form>

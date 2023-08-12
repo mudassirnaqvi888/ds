@@ -80,6 +80,7 @@ form h4{
 
 .frb{
     height: 380px;
+    text-align: center;
 }
 
 .pj h4{
@@ -102,4 +103,8 @@ form h4{
 
 .pj{
     margin-bottom: 80px;
+}
+
+.sk{
+    text-align: center;
 }

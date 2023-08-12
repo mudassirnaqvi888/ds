@@ -9,6 +9,7 @@ const sendMail = require('./mail');
 const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const auth = require('./middleware/auth');
+const http = require('http').createServer(app);
 const dirpath = path.join(__dirname, '/public');
 const bootstrap = path.join(__dirname, '/node_modules/bootstrap/dist/css/bootsra');
 app.use(express.static(dirpath));
@@ -71,7 +72,7 @@ app.post('/login',(req,resp)=>{
 });
 
 app.get('/dashboard',auth.islogin,(req,resp)=>{
-    resp.render('dashboard');
+    resp.render('dashboard',{confirm:null});
 })
 
 app.post('/dashboard',(req,resp)=>{
@@ -86,7 +87,7 @@ app.post('/dashboard',(req,resp)=>{
         if(error){
             console.log(error);
         }else{
-            resp.redirect('/dashboard');
+            return resp.render('dashboard',{confirm:'Your Appointment Has Been Confirmed'})
         }
     })
     
@@ -174,5 +175,26 @@ app.post('/weatherapp',(req,resp)=>{
     
 })
 
+app.get('/wassup',(req,resp)=>{
+    resp.sendFile(__dirname + '/public/wassup.html');
+})
 
-app.listen(5000);
+// socket 
+
+const io = require('socket.io')(http)
+
+
+io.on('connection',(socket)=>{
+    console.log('connected...')
+    socket.on('message', (msg)=>{
+        socket.broadcast.emit('message', msg);
+    })
+})
+
+
+
+const PORT = 3000;
+
+http.listen(PORT,()=>{
+    console.log(`listening on port: ${PORT}`)
+})
