@@ -62,7 +62,9 @@ app.post('/login',(req,resp)=>{
     console.log(results);
     console.log(email);
     console.log(password);
-    if(email == results[0].Email & password == results[0].Password){
+    if(results.length == 0){
+        return resp.render('login',{invalid:"Invalid Email & Password"});
+    }else if(email == results[0].Email & password == results[0].Password){
         req.session.email = results[0].Email;
         resp.cookie('email',email)
         return resp.redirect('dashboard');
