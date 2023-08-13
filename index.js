@@ -10,6 +10,7 @@ const cookieParser = require('cookie-parser');
 const session = require('express-session');
 const auth = require('./middleware/auth');
 const http = require('http').createServer(app);
+require('dotenv').config();
 const dirpath = path.join(__dirname, '/public');
 const bootstrap = path.join(__dirname, '/node_modules/bootstrap/dist/css/bootsra');
 app.use(express.static(dirpath));
@@ -193,7 +194,7 @@ app.get('/wassup',(req,resp)=>{
 
 
 
-const PORT = 5000;
+const PORT = process.env.PORT || '5000';
 
 http.listen(PORT,()=>{
     console.log(`listening on port: ${PORT}`)
