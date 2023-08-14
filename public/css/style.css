@@ -24,7 +24,7 @@ body{
 
 .sid h2{
     margin-top: 60px;
-    background-color: yellow;
+    background-color: #FFDB58;
     display: flex;
 }
 
@@ -44,13 +44,13 @@ p::before{
 
 .pro{
     height: 40px;
-    background-color: yellow;
+    background-color: #FFDB58;
     margin-bottom: 10px;
 }
 
 .con{
     height: 40px;
-    background-color: yellow;
+    background-color: #FFDB58;
     margin-bottom: 20px;
 }
 
