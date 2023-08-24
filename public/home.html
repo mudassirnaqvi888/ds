@@ -9,43 +9,43 @@
     <link rel="icon" href="./m.png">
 </head>
 <body>
-    <!-- nav -->
-    <nav class="navbar sticky-top navbar-expand-lg navbar-light" style="background-color:#FFDB58	;">
-        <a class="navbar-brand" href="#"><h2>PORTFOLIO</h2></a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      
-        <div class="collapse navbar-collapse" id="navbarSupportedContent">
-          <ul class="navbar-nav mr-auto">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#pp">Projects</a>
-            </li>
-
-            <li class="nav-item">
-                <a class="nav-link" href="#cc">Contact</a>
-              </li>
-        </div>
-      </nav>
-      <!-- nav close -->
       <!-- slider start -->
-      <div class="container">
+      <div class="container-fluid sid">
         <div class="row">
-            <div class="col-md-6 sid">
+            <div class="col-md-12 sid">
+              <!-- nav -->
+    <nav class="navbar  navbar-expand-lg navbar-light container-fluid">
+      <a class="navbar-brand" style="color: white;" href="#"><h1>PORTFOLIO</h1></a>
+      <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+    
+      <div class="collapse navbar-collapse" id="navbarSupportedContent">
+        <ul class="navbar-nav mr-auto">
+          <li class="nav-item">
+            <a class="nav-link"  style="color: white;" href="#">Home <span class="sr-only">(current)</span></a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link"  style="color: white;" href="#pp">Projects</a>
+          </li>
+
+          <li class="nav-item">
+              <a class="nav-link"  style="color: white;" href="#cc">Contact</a>
+            </li>
+      </div>
+    </nav>
+    <!-- nav close -->
                 <h2>I'M MUDASSIR NAQVI</h2>
                 <h5><p></p></h5>
-                <h6><em>I'm Pursuing Computer Science Degree From Karachi University DCS-UBIT Being a Part of The Computer Science Community Gives Me Sheer Joy And I Hope So I'll Contribute in This Community.</em></h6>
-                <h4 class="fa-fade"><em><a href="./resume.pdf"> View Resume </a></em></h4>
+                <h6 class="details"><em>I'm Pursuing Computer Science Degree From Karachi University DCS-UBIT <br> Being a Part of The Computer Science Community Gives Me Sheer Joy And <br> I Hope So I'll Contribute in This Community.</em></h6>
+                <h4 class="fa-fade vr"><em><a href="./resume.pdf"> View Resume </a></em></h4>
             </div>
-             <img src="me.jpg" class="col-md-6 me"/>
+             <div class="col-md-12"></div>
         </div>
       </div>
       <!--slider close  -->
       <!-- Project start -->
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
             <div class="col pro">
                 <div class="container">
@@ -60,29 +60,57 @@
         </div>
       </div>
       <!-- project name -->
-      <div class="container-fluid">
+      <div class="container-fluid pb">
         <div class="row">
           <div class="col-md-3 pj">
-            <h4>APPOINTMENT SYSTEM</h4>
-              <a href="./registration"><img class="regi" src="./reg.png"/></a>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./reg.png" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">APPOINTMENT SYSTEM</h5>
+                <a href="./registration" class="btn btn-primary">Go To App</a>
+              </div>
+            </div>
+            <!-- <h4>APPOINT SYSTEM</h4>
+              <a href="./registration"><img class="regi" src="./reg.png"/></a> -->
           </div>
           <div class="col-md-3 pj">
-            <h4>COUNTRIES SEARCHER</h4>
-              <a href="./country"><img class="regi" src="./api.PNG"/></a>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./api.PNG" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">COUNTRIES SEARCHER</h5>
+                <a href="#" class="btn btn-primary">Go To App</a>
+              </div>
+            </div>
+            <!-- <h4>COUNTRIES SEARCHER</h4>
+              <a href="./country"><img class="regi" src="./api.PNG"/></a> -->
           </div>
           <div class="col-md-3 pj">
-            <h4>WEATHER APP</h4>
-              <a href="./weatherapp"><img class="regi" src="./weather.PNG"/></a>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./weather.PNG" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">WEATHER APP</h5>
+                <a href="./weatherapp" class="btn btn-primary">Go To App</a>
+              </div>
+            </div>
+            <!-- <h4>WEATHER APP</h4>
+              <a href="./weatherapp"><img class="regi" src="./weather.PNG"/></a> -->
           </div>
           <div class="col-md-3 pj">
-            <h4>REAL TIME CHAT APP</h4>
-              <a href="./wassup"><img class="regi" src="./chatapp.PNG"/></a>
+            <div class="card" style="width: 18rem;">
+              <img class="card-img-top" src="./chatapp.PNG" alt="Card image cap">
+              <div class="card-body">
+                <h5 class="card-title">REAL TIME CHAT APP</h5>
+                <a href="./wassup" class="btn btn-primary">Go To App</a>
+              </div>
+            </div>
+            <!-- <h4>REAL TIME CHAT APP</h4>
+              <a href="./wassup"><img class="regi" src="./chatapp.PNG"/></a> -->
           </div>
         </div>
       </div>
       
       <!-- project close -->
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
           <div class="col-md-12 con">
             <div class="container">
@@ -96,19 +124,19 @@
       <div class="container-fluid sk">
         <div class="row">
           <div class="col-md-3">
-            <img src="html.png" class="fa-flip" height="150" alt/>
+            <img src="html.png"  height="100" alt/>
             <h2>HTML</h2>
           </div>
           <div class="col-md-3">
-            <img src="css.png" class="fa-flip" height="150" alt/>
+            <img src="css.png"  height="100" alt/>
             <h2>CSS</h2>
           </div>
           <div class="col-md-3">
-            <img src="js.png" class="fa-flip" height="150" alt/>
+            <img src="js.png"  height="100" alt/>
             <h2>JAVASCRIPT</h2>
           </div>
           <div class="col-md-3">
-            <img src="boot.png" class="fa-flip" height="150" alt/>
+            <img src="boot.png"  height="100" alt/>
             <h2>BOOTSTRAP</h2>
           </div>
         </div>
@@ -116,25 +144,25 @@
       <div class="container-fluid sk">
         <div class="row">
           <div class="col-md-3">
-            <img src="nodejs.png" class="fa-flip" height="150" alt/>
+            <img src="nodejs.png"  height="100" alt/>
             <h2>NODE JS</h2>
           </div>
           <div class="col-md-3">
-            <img src="ex.png" class="fa-flip" height="150" alt/>
+            <img src="ex.png"  height="100" alt/>
             <h2>EXPRESS JS</h2>
           </div>
           <div class="col-md-3">
-            <img src="mysql.png" class="fa-flip" height="150" alt/>
+            <img src="mysql.png"  height="100" alt/>
             <h2>MY SQL</h2>
           </div>
           <div class="col-md-3">
-            <img src="react.png" class="fa-flip" height="150" alt/>
+            <img src="react.png"  height="100" alt/>
             <h2>REACT JS</h2>
           </div>
         </div>
       </div>
       <!-- contact start -->
-      <div class="container-fluid">
+      <div class="container">
         <div class="row">
             <div class="col-md-12 con">
                 <div class="container">
@@ -191,7 +219,8 @@
 
      <!-- footer start -->
 
-     <footer class="text-center text-white" style="background-color: #FFDB58;">
+     <footer class="text-center text-white container-fluid" style="background: linear-gradient(-70deg,#F78F1E 30%, rgba(0, 0, 0, 0) 30%), url('planet.jpg');
+">
         <!-- Grid container -->
         <div class="container p-4 pb-0">
           <!-- Section: Social media -->
