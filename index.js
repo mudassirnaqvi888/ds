@@ -108,7 +108,7 @@ app.post('/verification',(req,resp)=>{
     console.log(random);
     if(req.body.verify == random){
         console.log(req.body.verify);
-    var sql ="INSERT INTO sign (firstName, lastName, Email, Password) VALUES (?,?,?,?);";
+    var sql ="INSERT INTO `sign`(`firstName`, `lastName`, `Email`, `Password`) VALUES (?,?,?,?)";
     con.query(sql,[req.cookies.data.fname,req.cookies.data.lname,req.cookies.data.email,req.cookies.data.password],(error,results)=>{
         if(error){
             console.log(error);
